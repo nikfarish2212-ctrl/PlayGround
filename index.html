@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07100e" />
+  <title>Touchline — Football Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Touchline home"><span class="brand-mark">T</span><span>touchline<span class="brand-dot">.</span></span></a>
+      <div class="club-mini"><div class="crest">⚒</div><div><strong>Riverside FC</strong><small>Northbridge · Est. 1924</small></div><span class="chevron">⌄</span></div>
+      <div class="nav-label">MANAGER</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">◫</span>Overview</button>
+        <button class="nav-item" data-view="squad"><span class="nav-icon">♟</span>Squad <span class="nav-count" id="squad-count">20</span></button>
+        <button class="nav-item" data-view="tactics"><span class="nav-icon">⌗</span>Tactics</button>
+        <button class="nav-item" data-view="fixtures"><span class="nav-icon">▦</span>Fixtures</button>
+        <button class="nav-item" data-view="transfers"><span class="nav-icon">⇄</span>Transfers</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="season-card"><div class="season-top"><span>SEASON 2025/26</span><span class="live-dot"></span></div><strong id="season-progress">MATCHDAY 1 <span>· 20</span></strong><div class="progress-track"><i id="season-bar"></i></div><small>Northbridge League</small></div>
+        <button class="nav-item settings-button" id="reset-save"><span class="nav-icon">⚙</span>New career</button>
+        <div class="manager-profile"><div class="avatar">JM</div><div><strong>Jordan Miles</strong><small>Head coach</small></div><span class="profile-more">···</span></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div class="crumb"><span>RIVERSIDE FC</span><span class="crumb-slash">/</span><strong id="top-context">OVERVIEW</strong></div><div class="top-actions"><div class="weather"><span>☀</span> 18° <i></i> Northbridge</div><div class="top-divider"></div><button class="icon-button" aria-label="Notifications">♧<b></b></button><div class="header-date"><span id="current-date">SATURDAY, 9 AUGUST 2025</span><strong id="header-matchday">MATCHDAY 01</strong></div></div></header>
+      <div id="app-content"></div>
+      <footer class="footer-note"><span>TOUCHLINE <b>·</b> YOUR CLUB. YOUR CALL.</span><span>Autosaved <i class="save-check">✓</i></span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true"><section class="match-modal" id="match-modal" role="dialog" aria-modal="true" aria-labelledby="match-title"></section></div>
+  <script src="game.js"></script>
+</body>
+</html>
